@@ -13,15 +13,8 @@ class Post extends Model
         'title', 'excerpt', 'body', 'image_path', 'is_published', 'min_to_read'
     ];
 
-    // protected $table = 'posts';
-
-    // protected $timestampes = false;
-
-    // protected $dateTime = 'U';
-
-    //protected $connection = 'sqlite';
-
-    // protected $atributes = [
-    //    'is_published' => true
-    // ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
