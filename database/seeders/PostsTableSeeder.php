@@ -17,24 +17,24 @@ class PostsTableSeeder extends Seeder
     {
         $posts = [
             [
-                'title' => 'Title One',
-                'excerpt' => 'Summary of post one',
-                'body' => 'Body of post one',
-                'image_path' => 'Empty',
+                'title' => 'Post One',
+                'excerpt' => 'Summary of Post One',
+                'body' => 'Content of Post One',
+                'image_path' => 'Empty for now',
                 'is_published' => false,
                 'min_to_read' => 2,
             ],
             [
-                'title' => 'Title Two',
-                'excerpt' => 'Summary of post Two',
-                'body' => 'Body of post Two',
-                'image_path' => 'Empty',
+                'title' => 'Post Two',
+                'excerpt' => 'Summary of Post Two',
+                'body' => 'Content of Post Two',
+                'image_path' => 'Empty for now',
                 'is_published' => false,
-                'min_to_read' => 2,
+                'min_to_read' => 4,
             ]
         ];
 
-        foreach ($posts as $key => $value) {
+        foreach($posts as $key => $value) {
             Post::create($value);
         }
     }
